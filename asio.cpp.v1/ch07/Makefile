@@ -9,7 +9,7 @@ LDFLAGS = -lpthread -lssl -lcrypto
 LDPATH =
 
 ifeq ($(OS), Windows_NT)
-	LDFLAGS = -lwsock32 -lws2_32 #-lpthread 
+	LDFLAGS = -lwsock32 -lws2_32 -lssl -lcrypto #-lpthread 
 endif
 
 SOURCES = $(shell ls *.cpp)
